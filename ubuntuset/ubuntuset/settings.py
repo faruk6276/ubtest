@@ -82,8 +82,14 @@ WSGI_APPLICATION = 'ubuntuset.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME'    : 'ub',
+        'USER'    : 'test',
+        'PASSWORD': '1234',
+        'HOST'    : 'localhost',
+        'PORT'    : '3306',
         'OPTIONS': {
-            'read_default_file': '../my.cnf',
+             'sql_mode': 'traditional',
+
         },
     }
 }
